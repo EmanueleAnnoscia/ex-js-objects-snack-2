@@ -6,13 +6,14 @@ verrà stampato in console
 -double Cheese burger
 
 //code question 2
-in memoria sono stati creati un totale di 4 "oggetti":
+in memoria sono stati creati un totale di 4 "oggetti":   //errato ci sono solo 3 oggetti perchè l'array non viene copiato
 oggetto hamburger, 
 array di ingredients, 
 oggetto second burger
 array ingredients con la modifica del primo elemento in salad
 
-verranno stampati in console:
+verranno stampati in console:  //errato siccome c'è solo un array che non può essere copiato alla modifica da un riferimento modificherà l'originale e quindi i due riferimenti andranno sul valore aggiornato salad
+
 cheese
 salad
 
