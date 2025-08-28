@@ -28,7 +28,7 @@ e due copie di hamburger quindi per un totale di 9 oggetti
 il miglior modo di clonare l'oggetto chef è lo spread operator poichè copierebbe anche la funzione, mentre nell'oggetto restaurant il metodo migliore è lo structured clone per due motivi il primo è che cìè una proprietà di secondo livello ed è una scelta migliore del json stringify per via del fatto che è presente un oggetto complesso come date
 
 //code question 5
-in totale sono stati stampati 7 oggetti che sono: 
+in totale sono stati stampati 5 oggetti che sono: 
 hamburger, 
 maker, 
 restaurant, 
@@ -39,9 +39,9 @@ restaurant di second burger
 ciò che apparirà in console sarà: 
 Anonymous Chef, 
 Chef Hyur, 
-Hyur's Burger, 
+Hyur's II, 
 Hyur's II
 
 //code question 6
-eseguirei una structured clone con all'interno degli spread operator per la copia delle chaivi con valore funzione
+eseguirei spread operator per ogni livello di prorpietà dell'oggetto
 
