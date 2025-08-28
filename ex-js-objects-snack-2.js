@@ -22,19 +22,32 @@ const chef = {
 }
 
 //funzione
-function deepCopy (obj){
-    //verifica se il parametro inserito sia effettivamente un oggetto
-    if (obj === null || typeof obj !== "object") return obj;
 
-    if (Array.isArray(obj)) {
-    return obj.map(item => deepCopy(item));
-  }
+//type of metodo per riconoscere il valore di un eleemnto
 
-  const copy = {}
+function deepCopy(obj){
 
-  for(let key in obj){
-    if(obj.hasOwnProperty(key)){
-        const value = obj[key];
-    }
-  }
+	if(Array.isArray(obj) === true){
+		return obj.map(item => deepCopy(item))
+	};
+
+	if(typeof obj !== 'object' || obj === null){
+		return obj
+	};
+	const copy = {};
+
+	for (const key in obj){
+		const value = obj[key]
+		if (typeof value !== 'object'){
+			copy[key] = value
+		}else{
+			copy[key] = deepCopy (value)
+		}
+	}
+	return copy;
 }
+
+
+const chefCopy = deepCopy(chef)
+
+//per completezza si dovrebbe fare il controllo se l'oggetto in analisi sia arry od oggetto vero proprio e in questo caso si utilizzerà Array.isArray(arrayDaControllare) e restituirà un true o false e di conseguenza il controllo se è true return array
